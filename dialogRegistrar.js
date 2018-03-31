@@ -55,7 +55,7 @@ CrearAsistencia = (session, asistir) => {
             .then(resLUIS => {
 
                 //De acuerdo a la respuesta de LUIS, se realiza la operacion
-                new clsForBusiness(resLUIS.topScoringIntent.intent,
+                let busLUIS = new clsForBusiness(resLUIS.topScoringIntent.intent,
                         resLUIS.entities[0].entity,
                         new entAsistencia(asistir, resLUIS.topScoringIntent.intent))
                     .Business;
