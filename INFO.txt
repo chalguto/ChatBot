@@ -1,0 +1,136 @@
+https://docs.microsoft.com/en-us/azure/cognitive-services/luis/home
+https://docs.microsoft.com/es-es/azure/cognitive-services/speaker-recognition/home
+
+Intents -- An intent represents actions the user wants to perform
+Utterances -- An utterance is text input from the user that your app needs to understand
+Entities -- An entity represents detailed information that is relevant in the utterance
+
+
+
+
+****=================================****
+****== LUIS Programmatic APIs v2.0 ==****
+****=================================****
+
+https://westus.dev.cognitive.microsoft.com/docs/services/5890b47c39e2bb17b84a55ff/operations/5890b47c39e2bb052c5b9c2f
+
+
+****=================================****
+****=================================****
+
+
+
+****== BEFORE YOU BEGIN ==****
+You need a Cognitive Services API key to make calls to the sample LUIS app we use in this walkthrough. To get an API key follow these steps:
+1) You first need to create a Cognitive Services API account in the Azure portal. If you don't have an Azure subscription, create a free account before you begin.
+2) Log in to the Azure portal at https://portal.azure.com.
+3) Follow the steps in Creating Subscription Keys using Azure to get a key.
+4) Go back to https://www.luis.ai and log in using your Azure account.
+
+Example:    http://aihelpwebsite.com/Blog/EntryId/4/Creating-Intelligent-Web-Applications-With-LUIS
+            http://mfelman.com/bot-framework-con-node-js-paso-a-paso/
+===========================================================================================================================
+
+
+
+
+
+
+
+1) Create a Chatbot service in Azure. (Create a bot with the Azure Bot Service. https://docs.microsoft.com/en-us/bot-framework/azure-bot-service-quickstart)
+
+2) Once created and deployed, click on "Channels" section in Azure.
+
+3) You will find WebChat Channel, listed there.
+
+4) Once Created, it would provide a code for embedding. Something like this..
+
+<iframe src='https://webchat.botframework.com/embed/botname?s=YOUR_SECRET_HERE'></iframe>
+===========================================================================================================================
+
+
+
+************************************************************************************
+************************************************************************************
+************************************************************************************
+
++ LUIS
+    Applicacion : InterChat
+    App Id: 7cdd3d78-b857-4d83-a901-efca652328f1
+    Subscription-Key: d1adb7d59b7e4500b40718b2154e281d
+    Endpoint: https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/7cdd3d78-b857-4d83-a901-efca652328f1?subscription-key=d1adb7d59b7e4500b40718b2154e281d&timezoneOffset=0&q=
+
+
++ Bing Speech API
+    Punto de conexión: https://api.cognitive.microsoft.com/sts/v1.0
+    Clave 1: b58cadf91201435e9bc7ccf69a90ec0c
+    Clave 2: fcbd6940b55d4e3e8faba52f875fedfd
+
+
++ Chatbot (INFO:    https://docs.microsoft.com/es-es/bot-framework/channel-connect-webchat
+                    https://docs.microsoft.com/en-us/bot-framework/cognitive-services-bot-intelligence-overview)
+    App: InterChat
+    Id. de aplicación (Key): ade2584c-86cd-4f96-b861-c2627e55a775    
+    pass: apuPDG38{^gceoLAZL981&-
+    url: myinterchat
+    ScretKEY: X38sIDxiweA.cwA.xrM.yJ4GhPbKU_oOOlLBBcdNpB2FgQqJWVVRv5IGa2H7hpI
+    Embed Code: <iframe src='https://webchat.botframework.com/embed/myinterchat?s=YOUR_SECRET_HERE'></iframe>
+
+    intercapitbot
+    https://intercapitbot.azurewebsites.net/api/messages
+    MICROSOFT_APP_ID=f619d755-fd45-4bb7-8554-8de10db6dcd3
+    MICROSOFT_APP_PASSWORD=bhoHL07{-wpndYKTQT765^{
+
+************************************************************************************
+************************************************************************************
+************************************************************************************
+
+
+
+============================================================================
+Language Understanding Intelligent Service (LUIS)
+https://www.luis.ai/home
+https://docs.microsoft.com/es-es/azure/cognitive-services/luis/home
+============================================================================
+
+
+
+
+
+Face API
+
+Detect, identify, analyze, organize, and tag faces in photos
+
+30,000 transactions, 20 per minute.
+Endpoint: https://westcentralus.api.cognitive.microsoft.com/face/v1.0
+
+Key 1: 06fa522ae3814f46b8af2fb589f714f8
+
+Key 2: 1ecc25512d72433eaed1d1bc071ab464
+
+
+
+
+
+
+*******************************************************************************************************+
+*******************************************************************************************************+
+
+
+
+Speaker Recognition API PREVIEW
+https://docs.microsoft.com/en-us/azure/cognitive-services/speech/getstarted/getstartedrest?tabs=CSharp
+https://westus.dev.cognitive.microsoft.com/docs/services/563309b6778daf02acc0a508/operations/563309b7778daf06340c9652
+
+
+
+
+
+Use speech to identify and authenticate individual speakers
+
+20,000 transactions per month, 20 per minute.
+Endpoint: https://westus.api.cognitive.microsoft.com/spid/v1.0
+
+Key 1: fa1fa842309a4bcaacf4950e652ca18d
+
+Key 2: b66446dbf3f04362a3811b4507b236cc

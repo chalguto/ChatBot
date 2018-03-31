@@ -1,0 +1,489 @@
+{
+  "luis_schema_version": "2.2.0",
+  "versionId": "0.1",
+  "name": "InterChat",
+  "desc": "Prototipo ChatBot",
+  "culture": "es-es",
+  "intents": [
+    {
+      "name": "Bienvenida"
+    },
+    {
+      "name": "Consultar"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "Registrar"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Buenas noches"
+    },
+    {
+      "name": "Buenas tardes"
+    },
+    {
+      "name": "Buenos dias"
+    },
+    {
+      "name": "Cargo"
+    },
+    {
+      "name": "Hasta luego"
+    },
+    {
+      "name": "Hola"
+    },
+    {
+      "name": "Horas"
+    },
+    {
+      "name": "Identificacion"
+    },
+    {
+      "name": "Ingreso"
+    },
+    {
+      "name": "Nombre"
+    },
+    {
+      "name": "Total"
+    }
+  ],
+  "composites": [
+    {
+      "name": "Ayudas",
+      "children": [
+        "Horas",
+        "Cargo",
+        "Total",
+        "Ingreso"
+      ]
+    },
+    {
+      "name": "Saludos",
+      "children": [
+        "Buenas noches",
+        "Buenas tardes",
+        "Buenos dias",
+        "Hasta luego",
+        "Hola"
+      ]
+    }
+  ],
+  "closedLists": [
+    {
+      "name": "Consulta",
+      "subLists": [
+        {
+          "canonicalForm": "Organizacion",
+          "list": [
+            "puesto",
+            "cargo",
+            "desempeño",
+            "labor"
+          ]
+        },
+        {
+          "canonicalForm": "Consultas",
+          "list": [
+            "nombre",
+            "muéstrame",
+            "ver",
+            "buscar",
+            "identificación",
+            "búsqueda",
+            "fecha",
+            "ingreso",
+            "muestra",
+            "muestre",
+            "hora",
+            "horario"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Guarda",
+      "subLists": [
+        {
+          "canonicalForm": "Registrar",
+          "list": [
+            "guarda",
+            "guardar",
+            "registrar",
+            "almacenar",
+            "almacena",
+            "registra",
+            "registre",
+            "guarde",
+            "almacene"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Llegada",
+      "subLists": [
+        {
+          "canonicalForm": "Llegando",
+          "list": []
+        },
+        {
+          "canonicalForm": "Llegada",
+          "list": []
+        },
+        {
+          "canonicalForm": "Llegar",
+          "list": []
+        },
+        {
+          "canonicalForm": "Entrando",
+          "list": []
+        }
+      ]
+    },
+    {
+      "name": "Salida",
+      "subLists": [
+        {
+          "canonicalForm": "Saliendo",
+          "list": []
+        },
+        {
+          "canonicalForm": "Salir",
+          "list": []
+        },
+        {
+          "canonicalForm": "Salida",
+          "list": []
+        }
+      ]
+    }
+  ],
+  "regex_entities": [],
+  "bing_entities": [],
+  "model_features": [
+    {
+      "name": "Buscar",
+      "mode": true,
+      "words": "horas,fecha,llegada,salida",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "ayuda",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "Ayudas",
+          "startPos": 0,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "buen dia",
+      "intent": "Bienvenida",
+      "entities": [
+        {
+          "entity": "Saludos",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "Saludos",
+          "startPos": 5,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "buenas",
+      "intent": "Bienvenida",
+      "entities": [
+        {
+          "entity": "Saludos",
+          "startPos": 0,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "buenas noches",
+      "intent": "Bienvenida",
+      "entities": [
+        {
+          "entity": "Saludos",
+          "startPos": 0,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "buenas tardes",
+      "intent": "Bienvenida",
+      "entities": [
+        {
+          "entity": "Saludos",
+          "startPos": 0,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "buenos dias",
+      "intent": "Bienvenida",
+      "entities": [
+        {
+          "entity": "Saludos",
+          "startPos": 0,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "como estas?",
+      "intent": "Bienvenida",
+      "entities": [
+        {
+          "entity": "Saludos",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "Saludos",
+          "startPos": 5,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "cual es el horario de la empresa?",
+      "intent": "Consultar",
+      "entities": []
+    },
+    {
+      "text": "cual es mi identificación",
+      "intent": "Consultar",
+      "entities": []
+    },
+    {
+      "text": "cuando ingresé a la empresa ?",
+      "intent": "Consultar",
+      "entities": [
+        {
+          "entity": "Ingreso",
+          "startPos": 7,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "cuantas horas he trabajado",
+      "intent": "Consultar",
+      "entities": [
+        {
+          "entity": "Horas",
+          "startPos": 8,
+          "endPos": 12
+        },
+        {
+          "entity": "Total",
+          "startPos": 17,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "cuantas horas he trabajado hoy",
+      "intent": "Consultar",
+      "entities": [
+        {
+          "entity": "Horas",
+          "startPos": 8,
+          "endPos": 12
+        },
+        {
+          "entity": "Horas",
+          "startPos": 17,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "cuantas horas tengo de trabajo",
+      "intent": "Consultar",
+      "entities": [
+        {
+          "entity": "Horas",
+          "startPos": 8,
+          "endPos": 12
+        },
+        {
+          "entity": "Horas",
+          "startPos": 23,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "cuantas horas trabajé ayer",
+      "intent": "Consultar",
+      "entities": [
+        {
+          "entity": "Horas",
+          "startPos": 8,
+          "endPos": 12
+        },
+        {
+          "entity": "Horas",
+          "startPos": 14,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "fecha de ingreso",
+      "intent": "Consultar",
+      "entities": [
+        {
+          "entity": "Ingreso",
+          "startPos": 9,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "guarda mi llegada",
+      "intent": "Registrar",
+      "entities": []
+    },
+    {
+      "text": "guarda mi salida",
+      "intent": "Registrar",
+      "entities": []
+    },
+    {
+      "text": "hola",
+      "intent": "Bienvenida",
+      "entities": [
+        {
+          "entity": "Saludos",
+          "startPos": 0,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "horas de trabajo",
+      "intent": "Consultar",
+      "entities": [
+        {
+          "entity": "Total",
+          "startPos": 9,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "mi cargo",
+      "intent": "Consultar",
+      "entities": [
+        {
+          "entity": "Cargo",
+          "startPos": 3,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "muéstrame la fecha de ingreso",
+      "intent": "Consultar",
+      "entities": [
+        {
+          "entity": "Ingreso",
+          "startPos": 22,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "muéstrame las horas de trabajo en la empresa",
+      "intent": "Consultar",
+      "entities": [
+        {
+          "entity": "Total",
+          "startPos": 23,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "muéstrame mi hora de llegada",
+      "intent": "Consultar",
+      "entities": []
+    },
+    {
+      "text": "muéstrame mi hora de salida",
+      "intent": "Consultar",
+      "entities": []
+    },
+    {
+      "text": "muéstrame mi identificación",
+      "intent": "Consultar",
+      "entities": []
+    },
+    {
+      "text": "que cargo tengo en la empresa",
+      "intent": "Consultar",
+      "entities": []
+    },
+    {
+      "text": "que tal?",
+      "intent": "Bienvenida",
+      "entities": [
+        {
+          "entity": "Saludos",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "Saludos",
+          "startPos": 4,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "voy de llegada",
+      "intent": "Registrar",
+      "entities": []
+    },
+    {
+      "text": "voy de salida",
+      "intent": "Registrar",
+      "entities": []
+    },
+    {
+      "text": "voy entrando",
+      "intent": "Registrar",
+      "entities": []
+    },
+    {
+      "text": "voy llegando",
+      "intent": "Registrar",
+      "entities": []
+    },
+    {
+      "text": "voy saliendo",
+      "intent": "Registrar",
+      "entities": []
+    }
+  ]
+}

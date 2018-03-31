@@ -1,0 +1,187 @@
+{
+  "luis_schema_version": "2.2.0",
+  "versionId": "0.1",
+  "name": "DBInterChat",
+  "desc": "AI. Identificacion de Query's",
+  "culture": "es-es",
+  "intents": [
+    {
+      "name": "Consultar.Fecha"
+    },
+    {
+      "name": "Consultar.Horas"
+    },
+    {
+      "name": "Consultar.Personal"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "Registrar.Llegada"
+    },
+    {
+      "name": "Registrar.Salida"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Cargo"
+    },
+    {
+      "name": "Horario"
+    },
+    {
+      "name": "Horas"
+    },
+    {
+      "name": "Identificacion"
+    }
+  ],
+  "composites": [],
+  "closedLists": [
+    {
+      "name": "Llegada",
+      "subLists": [
+        {
+          "canonicalForm": "Llegada",
+          "list": [
+            "llegué",
+            "entrando",
+            "entrar",
+            "llegando",
+            "llegar",
+            "ingreso",
+            "llegada"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Salida",
+      "subLists": [
+        {
+          "canonicalForm": "Salida",
+          "list": [
+            "sali",
+            "saliendo",
+            "salir",
+            "ida",
+            "salida",
+            "salí"
+          ]
+        }
+      ]
+    }
+  ],
+  "regex_entities": [],
+  "bing_entities": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "adios",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "buenas noches",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "buenas tardes",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "buenos dias",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "chao",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "consulta salida",
+      "intent": "Consultar.Fecha",
+      "entities": []
+    },
+    {
+      "text": "consultar cargo",
+      "intent": "Consultar.Horas",
+      "entities": [
+        {
+          "entity": "Cargo",
+          "startPos": 10,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "consultar horario",
+      "intent": "Consultar.Horas",
+      "entities": [
+        {
+          "entity": "Horario",
+          "startPos": 10,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "consultar horas",
+      "intent": "Consultar.Horas",
+      "entities": [
+        {
+          "entity": "Horas",
+          "startPos": 10,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "consultar identificación",
+      "intent": "Consultar.Personal",
+      "entities": [
+        {
+          "entity": "Identificacion",
+          "startPos": 10,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "consultar ingreso",
+      "intent": "Consultar.Fecha",
+      "entities": []
+    },
+    {
+      "text": "consultar llegada",
+      "intent": "Consultar.Fecha",
+      "entities": []
+    },
+    {
+      "text": "hasta luego",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "hola",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "registrar llegada",
+      "intent": "Registrar.Llegada",
+      "entities": []
+    },
+    {
+      "text": "registrar salida",
+      "intent": "Registrar.Salida",
+      "entities": []
+    }
+  ]
+}
