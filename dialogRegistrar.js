@@ -61,7 +61,7 @@ CrearAsistencia = (session, asistir) => {
                     .Business;
 
                 //Muestra el mensaje de registro
-                session.endDialog(viewMessage(asistir, resLUIS));
+                session.endDialog(viewMessage_Registro(asistir, resLUIS));
 
                 session.userData.asistencia = {};
                 console.log("inicializando userData.asistencia para manejar la Asistencia");
@@ -71,4 +71,4 @@ CrearAsistencia = (session, asistir) => {
     }
 }
 
-viewMessage = (a, L) => `De acuerdo, ${a.Identificacion.Nombre} ${a.Identificacion.Apellido}. La solicitud de ${L.topScoringIntent.intent} tu asistencia del ${a.Fecha} es a las ${a.Hora} hrs.`;
+viewMessage_Registro = (a, L) => `De acuerdo, ${a.Identificacion.Nombre} ${a.Identificacion.Apellido}. La solicitud de ${L.topScoringIntent.intent} tu asistencia del ${a.Fecha} es a las ${a.Hora} hrs.`;

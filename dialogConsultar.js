@@ -67,7 +67,7 @@ ConsultarAsistencia = (session, asistir) => {
             )
             .then(res => {
                 //Muestra el mensaje de registro
-                session.endDialog(viewMessage(asistir, res));
+                session.endDialog(viewMessage_Consulta(asistir, res));
 
                 session.userData.asistencia = {};
                 console.log("inicializando userData.asistencia para manejar la Asistencia");
@@ -77,4 +77,4 @@ ConsultarAsistencia = (session, asistir) => {
     }
 }
 
-viewMessage = (a, c) => `De acuerdo, ${a.Identificacion.Nombre} ${a.Identificacion.Apellido}. La solicitud de ${c.Motivo} de tu asistencia del ${c.Fecha} es de ${c.Hora}.`;
+viewMessage_Consulta = (a, c) => `De acuerdo, ${a.Identificacion.Nombre} ${a.Identificacion.Apellido}. La solicitud de ${c.Motivo} de tu asistencia del ${c.Fecha} es de ${c.Hora}.`;
