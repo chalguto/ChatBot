@@ -2,14 +2,14 @@
 require('dotenv').load()
 
 const botbuilder = require('botbuilder'),
-    botbuilder_azure = require("botbuilder-azure");
-//restify = require('restify');
+    botbuilder_azure = require("botbuilder-azure"),
+    restify = require('restify');
 
 // Setup Restify Server
-//const server = restify.createServer();
-//server.listen(process.env.port || process.env.PORT || 3978, () => {
-//  console.log('%s listening to %s', server.name, server.url);
-//});
+const server = restify.createServer();
+server.listen(process.env.port || process.env.PORT || 3978, () => {
+    console.log('%s listening to %s', server.name, server.url);
+});
 
 // Bot Storage
 let tableName = 'botdata';
@@ -23,7 +23,7 @@ const connector = new botbuilder.ChatConnector({
 });
 
 const bot = new botbuilder.UniversalBot(connector);
-//server.post('/api/messages', connector.listen());
+server.post('/api/messages', connector.listen());
 
 //==============================================================
 // Bot Setup. LUIS model. 'LUIS_MODEL_URL' environment variable
