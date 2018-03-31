@@ -13,7 +13,7 @@ server.listen(process.env.port || process.env.PORT || 3978, () => {
 
 // Bot Storage
 let tableName = 'botdata';
-let azureTableClient = new botbuilder_azure.AzureTableClient(tableName, process.env['AzureWebJobsStorage']);
+let azureTableClient = new botbuilder_azure.AzureTableClient(tableName, process.env.AzureWebJobsStorage);
 let tableStorage = new botbuilder_azure.AzureBotStorage({ gzipData: false }, azureTableClient);
 
 // Create connector and listen for messages
@@ -22,8 +22,9 @@ const connector = new botbuilder.ChatConnector({
     appPassword: process.env.MICROSOFT_APP_PASSWORD
 });
 
-const bot = new botbuilder.UniversalBot(connector);
+var bot = new botbuilder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
+bot.set('storage', tableStorage);
 
 //==============================================================
 // Bot Setup. LUIS model. 'LUIS_MODEL_URL' environment variable
