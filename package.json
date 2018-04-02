@@ -8,23 +8,12 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "body-parser": "^1.18.2",
         "botbuilder": "^3.13.1",
         "botbuilder-azure": "^3.0.4",
-        "cookie-parser": "^1.4.3",
-        "debug": "^3.1.0",
         "documentdb": "^1.14.2",
         "dotenv": "^4.0.0",
-        "express": "^4.16.3",
-        "https": "^1.0.0",
-        "jade": "^1.11.0",
         "moment": "^2.20.1",
-        "morgan": "^1.9.0",
         "mssql": "^4.1.0",
-        "path": "^0.12.7",
-        "request": "^2.83.0",
-        "restify": "^6.3.2",
-        "serve-favicon": "^2.5.0",
-        "util": "^0.10.3"
+        "restify": "^6.3.2"
     }
 }
