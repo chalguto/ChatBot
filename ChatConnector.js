@@ -1,5 +1,5 @@
 // Loads the environment variables from the .env file
-require('dotenv').load();
+require('dotenv-extended').load();
 
 const botbuilder = require('botbuilder'),
     botbuilder_azure = require("botbuilder-azure"),

@@ -1,5 +1,5 @@
-// Loads the environment variables from the .env file
-require('dotenv').load();
+// This loads the environment variables from the .env file
+require('dotenv-extended').load();
 
 const
     builder = require('botbuilder'),
