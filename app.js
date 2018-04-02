@@ -1,3 +1,6 @@
+// Loads the environment variables from the .env file
+require('dotenv').load();
+
 const
 /*express = require('express'),
    path = require('path'),
