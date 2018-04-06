@@ -143,6 +143,14 @@
         {
           "canonicalForm": "Entrando",
           "list": []
+        },
+        {
+          "canonicalForm": "Entrar",
+          "list": []
+        },
+        {
+          "canonicalForm": "entrada",
+          "list": []
         }
       ]
     },
@@ -349,6 +357,11 @@
       ]
     },
     {
+      "text": "entrada",
+      "intent": "Registrar",
+      "entities": []
+    },
+    {
       "text": "fecha de ingreso",
       "intent": "Consultar",
       "entities": [
@@ -459,6 +472,21 @@
           "endPos": 6
         }
       ]
+    },
+    {
+      "text": "quiero entrar",
+      "intent": "Registrar",
+      "entities": []
+    },
+    {
+      "text": "quiero salir",
+      "intent": "Registrar",
+      "entities": []
+    },
+    {
+      "text": "saliendo",
+      "intent": "Registrar",
+      "entities": []
     },
     {
       "text": "voy de llegada",
